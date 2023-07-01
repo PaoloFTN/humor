@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import React from 'react'
 import PlainCard from '../../atoms/plain-card'
-import { Auth } from '../../context/auth-context'
+import { Auth } from '../../../context/auth-context'
 
 const ProfileCardHome = React.memo(() => {
     const { palette } = useTheme()

@@ -1,4 +1,4 @@
-import ProfileCardHome from './../../molecule/profile-card-home'
+import ProfileCardHome from '../../molecule/profile-card-home'
 import { Avatar, Card, Typography, useTheme } from '@mui/material'
 import Box from '@mui/material/Box'
 import * as React from 'react'

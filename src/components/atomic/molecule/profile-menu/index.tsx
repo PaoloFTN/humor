@@ -1,9 +1,8 @@
+import * as React from 'react'
 import { Button, Drawer, Typography, useTheme } from '@mui/material'
 import { CloseOutlined, Person } from '@mui/icons-material'
 import { Box } from '@mui/system'
-import * as React from 'react'
-import LeftHomeComponent from '../../organism/left-home-component'
-import { Auth } from '../../context/auth-context'
+import { Auth } from '../../../context/auth-context'
 import ProfileCardHome from '../profile-card-home'
 
 const ProfileMenu = React.memo(() => {
@@ -17,7 +16,7 @@ const ProfileMenu = React.memo(() => {
 
     return (
         <>
-            <Box>
+            <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
                 <Button onClick={() => handleShowMenu()}>
                     <Person sx={{ color: 'white' }} />
                 </Button>

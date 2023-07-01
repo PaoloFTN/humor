@@ -2,7 +2,7 @@ import { Person } from '@mui/icons-material'
 import { Box, Tooltip, Avatar, Typography, Button, useTheme } from '@mui/material'
 import { palette } from '@mui/system'
 import React from 'react'
-import { UserAuth } from '../../context/auth-context'
+import { UserAuth } from '../../../context/auth-context'
 
 interface ProfileProps {
     authData?: UserAuth

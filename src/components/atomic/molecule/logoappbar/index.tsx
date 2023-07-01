@@ -1,28 +1,15 @@
-import ProfileTooltip from './../profile-tooltip'
-import {
-    AppBar,
-    Avatar,
-    Button,
-    Container,
-    List,
-    ListItemButton,
-    Menu,
-    MenuItem,
-    Tooltip,
-    Typography,
-    useTheme,
-} from '@mui/material'
-import Box from '@mui/material/Box'
-import { Person } from '@mui/icons-material'
 import * as React from 'react'
+import ProfileTooltip from '../profile-tooltip'
+import { AppBar, Button, Container, Typography, useTheme } from '@mui/material'
+import Box from '@mui/material/Box'
 import { useNavigate } from 'react-router-dom'
 import { pages } from './pages-menu/pages'
-import { Auth } from '../../context/auth-context'
+import { Auth } from '../../../context/auth-context'
 import ProfileMenu from '../profile-menu'
 
 export const LogoAppBarHeight = 80
 
-const LogoAppBar = () => {
+const LogoAppBar = React.memo(() => {
     const navigate = useNavigate()
 
     const { authData } = Auth()
@@ -37,6 +24,7 @@ const LogoAppBar = () => {
                 <Typography
                     variant="h3"
                     fontFamily={'montserrat'}
+                    onClick={() => handleNav('/')}
                     sx={{ fontSize: { xs: 24, sm: 'inherit' }, flex: { xs: 1, sm: 0.4 } }}>
                     😁 HUMOR
                 </Typography>
@@ -62,6 +50,6 @@ const LogoAppBar = () => {
             </Container>
         </AppBar>
     )
-}
+})
 
 export default LogoAppBar

@@ -1,7 +1,7 @@
 export const pages = [
     {
         name: 'feed',
-        link: '/feed',
+        link: '/profile',
     },
     {
         name: 'explore',
